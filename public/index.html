@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="contractorApp">
+<head>
+
+<!--angular-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+<!--Bootstrap-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- the script for js files..  -->
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    
+<div class="container" ng-controller="AppCtrl">
+<nav class="navbar navbar-default container-fluid col-xs-12 col-sm-12 col-md-12">
+    
+    <div class="container-fluid ">
+    
+            <!--logo-->
+        
+        <div class="navbar-header col-xs-12 col-sm-12 col-md-12">
+            <a href="#" class="navbar-brand">muvus.co.uk</a>
+        
+        </div>
+   
+     
+    </div>  
+
+</nav>
+<!--input group
+
+Name (DONE)
+Last name (DONE)
+Date of Birth. (DONE)
+Full Address. (DONE)
+Email (DONE)
+Mobile (DONE)
+What kind of van do you have (done)
+Van registration (done)
+
+-->
+    
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 panel panel-default">
+            <div class="panel">
+            <legend> Sign up and start making money!</legend>
+            <form action="#" method="post" class="form" role="form">
+<!--basic info-->                
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <p><input class="form-control" name="firstname" placeholder="First Name" type="text"
+                        required autofocus ng-model="contact.firstname"/></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <p><input class="form-control" name="lastname" placeholder="Last Name" type="text" required autofocus ng-model="contact.lastname"/></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                   <p> <input class="form-control" name="email" placeholder="email" type="text"
+                        required autofocus ng-model="contact.email" /></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <p><input class="form-control" name="phonenumber" placeholder="phone number" type="text" required ng-model="contact.phonenumber"/></p>
+                </div>
+            </div>
+<!--Birth Date-->   
+              <label for="">Birth Date</label>
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                 <p><input class="form-control" name="birthday" placeholder="Day" type="text"
+                        required autofocus ng-model="contact.birthday" /></p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <p>  <select class="form-control" name="birthmonth" ng-model="contact.birthmonth">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November </option>
+                        <option value="December">December</option>
+                    </select> </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                   <p> <input class="form-control" name="birthyear" placeholder="year" type="text"
+                        required autofocus ng-model="contact.birthyear" /> </p>
+                </div>
+            </div>
+<!-- Address -->   
+            <label for="">Address Details</label>
+        
+                       <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p>  <input class="form-control" name="addressline1" placeholder="Address Line 1" type="text"
+                        required autofocus ng-model="contact.addressline1"/></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                   <p> <input class="form-control" name="addressline2" placeholder="Address Line 2" type="text" required ng-model="contact.addressline2"/> </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <p>  <input class="form-control" name="city" placeholder="City" type="text"
+                        required autofocus ng-model="contact.city"/> </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                   <p> <input class="form-control" name="postcode" placeholder="Post Code" type="text" required ng-model="contact.postcode"/></p>
+                </div>
+            </div>
+<!--Van Type-->   
+               <label for="">Van type</label>  
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p>  <select class="form-control" name="vantype" ng-model="contact.vantype">
+                        <option value="Cardrivedvans">Car Drived Vans</option>
+                        <option value="sub1tonne">Sub 1 Tonne</option>
+                        <option value="shortwheelbase">Short Wheel Base</option>
+                        <option value="longwheelbase">Long Wheelbase</option>
+                        <option value="extralongwheelbase">Extra Long Wheelbase</option>
+                        <option value="Luton3.5">Luton 3.5</option>
+
+                    </select> </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <p>  <input class="form-control" name="reg" placeholder="Reg Number" type="text" required ng-model="contact.reg" /> </p>
+                </div>
+            <br />
+            <br />
+           <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="addContractor()">
+                Sign up</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
