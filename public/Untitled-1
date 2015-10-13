@@ -1,51 +1,25 @@
-<!DOCTYPE html>
-<html ng-app="contractorApp">
-<head>
-
-<!--angular-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-<!--Bootstrap-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- the script for js files..  -->
-<script type="text/javascript" src="app.js"></script>
-<script type="text/javascript" src="controller.js"></script>
-<!-- css -->
-<link rel="stylesheet" type="text/css" href="index.css">
-</head>
-
-<body>
-    
-<div class="container" ng-controller="AppCtrl">
-<!--<nav class="navbar navbar-default container-fluid col-xs-12 col-sm-12 col-md-12">
-    
-    <div class="container-fluid ">
-    
-      
-        
-        <div class="navbar-header col-xs-12 col-sm-12 col-md-12">
-            <a href="#" class="navbar-brand">muvus.co.uk</a>
-        
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-9 panel panel-default" id="form">
+            <div class="panel-body">
+            <legend> Sign up and start making money!</legend>
+                </div>
+            <div class="panel-footer">
+       
+                </div>
         </div>
-   
-     
-    </div>  
+    </div>
+</div>
+</div>
 
-    </nav>-->
-    
-<!--group-->
-    
-    
-    
-<div class="panel panel-default">
-  <div class="panel-body">
-    <legend> Sign up and start making money!</legend>
-  </div>
-  <div class="panel-footer">
-      
-      <form method="post" class="form" role="form">
+</body>
+</html>
+
+
+
+
+
+<form method="post" class="form" role="form">
 <!--basic info-->                
             <div class="row">
                 <div class="col-xs-12 col-md-6">
@@ -113,9 +87,9 @@
                 </div>
             </div>
 <!--Van Type-->   
-               <label for="">Van Type And Porters</label>  
+               <label for="">Van type</label>  
             <div class="row">
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-6">
                   <p>  <select class="form-control" name="vantype" ng-model="contact.vantype">
                         <option value="Cardrivedvans">Car Drived Vans</option>
                         <option value="sub1tonne">Sub 1 Tonne</option>
@@ -126,15 +100,7 @@
 
                     </select> </p>
                 </div>
-                 <div class="col-xs-12 col-md-4">
-                  <p>  <select class="form-control" name="Porters" ng-model="contact.Porters">
-                        <option value="1Porter">1 Porter</option>
-                        <option value="2Porters">2 Porters</option>
-                        <option value="3Porters">3 Porters</option>
-                    
-                    </select> </p>
-                </div>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-6">
                   <p>  <input class="form-control" name="reg" placeholder="Reg Number" type="text" required ng-model="contact.reg" /> </p>
                 </div>
             <br />
@@ -143,17 +109,4 @@
            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="addContractor()">
                 Sign up</button>
                 </div>
-            </form>
-    
-    
-    
-</div>
-</div>
-
-    
-</div>
-
-    
-</body>
-</html>
-
+            </form> -->

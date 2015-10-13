@@ -5,3 +5,13 @@ body {
 legend{
     margin-left:;
 }
+
+#form{
+    margin-left: 150px;
+}
+
+#button{
+    margin-left: 650px;
+    margin-bottom: 25px;
+}
+
